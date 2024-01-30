@@ -9,28 +9,24 @@ long long factorial(int n){
     return fact;
 }
 
-int es_primo(int n){
-    if (n <= 1){
-        return 0;
-    }
+int is_prime(int n){
     for (int i = 2; i < n; i++){
         if (n % i == 0){
             return 0;
         }
     }
-    return 1;
+    return n > 1;
 }
 
 int main(int argc, char *argv[]) {
-    int number;
 
     if (argc != 2) {
-        fprintf(stderr,"Usage: program <number>\n");
+        fprintf(stderr, "Usage: program <number>\n");
         return 1;
     }
-    else{
-        number = atoi(argv[1]);
-    }
+
+    int number = atoi(argv[1]);
+
 
     /*It must be verified that the entered number is greater than or equal to zero*/
     if (number < 0){
@@ -45,11 +41,11 @@ int main(int argc, char *argv[]) {
     printf("The factorial of %d is: %lld\n", number, fact);
 
     /*Implement the function that calculates if the argument is a prime number*/
-    es_primo(number);
+    is_prime(number);
 
     /*Print the result*/
-    int primo = es_primo(number);
-    if (primo){
+    int prime = is_prime(number);
+    if (prime){
         printf("%d is a prime number\n", number);
     }
     else{
