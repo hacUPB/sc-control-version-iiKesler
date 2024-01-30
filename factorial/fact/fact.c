@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 long long factorial(int n){
     long long fact = 1;
@@ -25,9 +24,7 @@ int es_primo(int n){
 int main(int argc, char *argv[]) {
     int number;
 
-    if (argc < 2) {
-        srand(time(0)); // Inicia la semilla para generar números aleatorios
-        number = rand() % 100; // Genera un número aleatorio entre 0 y 99
+    if (argc != 2) {
         fprintf(stderr,"Usage: program <number>\n");
         return 1;
     }
@@ -37,7 +34,7 @@ int main(int argc, char *argv[]) {
 
     /*It must be verified that the entered number is greater than or equal to zero*/
     if (number < 0){
-        fprintf(stderr,"El numero debe de ser mayor o igual a 0\n");
+        fprintf(stderr,"The number must be greater than or equal to zero\n");
         return 1;
     }
 
@@ -45,7 +42,7 @@ int main(int argc, char *argv[]) {
     long long fact= factorial(number);
 
     /*Print the result*/
-    printf("El factorial de %d es %lld\n", number, fact);
+    printf("The factorial of %d is: %lld\n", number, fact);
 
     /*Implement the function that calculates if the argument is a prime number*/
     es_primo(number);
@@ -53,10 +50,10 @@ int main(int argc, char *argv[]) {
     /*Print the result*/
     int primo = es_primo(number);
     if (primo){
-        printf("%d es primo\n", number);
+        printf("%d is a prime number\n", number);
     }
     else{
-        printf("%d no es primo\n", number);
+        printf("%d is not a prime number\n", number);
     }
 
     return 0;
