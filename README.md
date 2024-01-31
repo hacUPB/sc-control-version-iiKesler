@@ -8,10 +8,20 @@
 
 # Cuando se tienen estas funciones creadas, se pueden implementar en Main, guardar los resultados e imprimirlos
 
+# Imagenes del código:
+
 # ![img.png](img.png)
 
 # ![img_1.png](img_1.png)
 
 # ![img_2.png](img_2.png)
 
-# https://github.com/hacUPB/sc-control-version-iiKesler.git
+# Hipervinculo del repositorio:
+        # https://github.com/hacUPB/sc-control-version-iiKesler.git
+
+# Comandos git:
+        # gh repo clone hacUPB/sc-control-version-iiKesler
+        # git add ./factorial/fact/fact.c
+        # git commit -m "[Mensaje del cmmit]"
+        # git push
+        
