@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+long long factorial (int n){
+    long long fact = 1;
+    for (int i = 1; i <= n; i++){
+        fact *= i;
+    }
+    return fact;
+}
+
+
 int main(int argc, char *argv[]) {
     if (argc < 2) {
         fprintf(stderr,"Usage: program <number>\n");
