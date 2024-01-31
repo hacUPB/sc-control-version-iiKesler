@@ -35,10 +35,12 @@ int main(int argc, char *argv[]) {
         fprintf(stderr,"The number must be greater than or equal to zero\n");
         return 1;
     }
+
     /*Implement the function that calculates the factorial of the input argument*/
+    long long fact = factorial(number);
 
     /*Print the result*/
-
+    
     /*Implement the function that calculates if the argument is a prime number*/
 
     /*Print the result*/
