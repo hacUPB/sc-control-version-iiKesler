@@ -22,12 +22,13 @@ int is_prime(int n){
 }
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
+    int number;
+
+    if (argc != 2) {
         fprintf(stderr,"Usage: program <number>\n");
         return 1;
-    }
-
-    int number = atoi(argv[1]); //Convert the console input argument to an integer
+    }else
+        number = atoi(argv[1]); //Convert the console input argument to an integer
 
     /*It must be verified that the entered number is greater than or equal to zero*/
     if (number < 0) {
